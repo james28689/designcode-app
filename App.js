@@ -45,6 +45,7 @@ export default class App extends React.Component {
             >
               {cards.map((card, index) => (
                 <Card
+                  key={index}
                   image={card.image}
                   title={card.title}
                   logo={card.logo}
