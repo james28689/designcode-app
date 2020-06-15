@@ -9,7 +9,7 @@ export default class App extends React.Component {
         <TitleBar>
           <Avatar source={require("./assets/avatar.jpg")} />
           <Title>Welcome back, </Title>
-          <Name>Meng</Name>
+          <Name>James</Name>
         </TitleBar>
       </Container>
     );
