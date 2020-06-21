@@ -85,6 +85,8 @@ class Menu extends React.Component {
   }
 }
 
+export default connect(mapStateToProps, mapDispatchToProps)(Menu);
+
 const Image = styled.Image`
   position: absolute;
   width: 100%;
@@ -137,8 +139,6 @@ const Content = styled.View`
   background: #f0f3f5;
   padding: 50px;
 `;
-
-export default connect(mapStateToProps, mapDispatchToProps)(Menu);
 
 const items = [
   {
