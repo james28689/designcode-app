@@ -50,6 +50,7 @@ const CardsQuery = gql`
           width
           height
         }
+        content
       }
     }
   }
@@ -230,11 +231,12 @@ class HomeScreen extends React.Component {
                           }}
                         >
                           <Card
-                            image={card.image}
+                            image={{ uri: card.image.url }}
                             title={card.title}
-                            logo={card.logo}
+                            logo={{ uri: card.logo.url }}
                             caption={card.caption}
                             subtitle={card.subtitle}
+                            content={card.content}
                           />
                         </TouchableOpacity>
                       ))}
@@ -266,12 +268,12 @@ class HomeScreen extends React.Component {
                       {data.coursesCollection.items.map((course, index) => (
                         <Course
                           key={index}
-                          image={course.image}
+                          image={{ uri: course.image.url }}
                           title={course.title}
                           subtitle={course.subtitle}
-                          logo={course.logo}
+                          logo={{ uri: course.logo.url }}
                           author={course.author}
-                          avatar={course.avatar}
+                          avatar={{ uri: course.avatar.url }}
                           caption={course.caption}
                         />
                       ))}
